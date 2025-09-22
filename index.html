@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Alba Impact Innovation Centre: An Infographic Proposal</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <style>
+       body {
+           font-family: 'Inter', sans-serif;
+           background-color: #F0F4F8;
+       }
+       .chart-container {
+           position: relative;
+           width: 100%;
+           max-width: 600px;
+           margin-left: auto;
+           margin-right: auto;
+           height: 320px;
+           max-height: 400px;
+       }
+       @media (min-width: 768px) {
+           .chart-container {
+               height: 400px;
+           }
+       }
+       .kpi-card {
+           background-color: #003F5C;
+           color: white;
+       }
+       .section-title {
+           color: #003F5C;
+       }
+       .card {
+           background-color: white;
+           border-radius: 0.75rem;
+           box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+           transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+       }
+       .card:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+       }
+       .flow-arrow {
+           color: #FFA600;
+           font-weight: bold;
+           font-size: 2rem;
+       }
+   </style>
+</head>
+<body class="text-gray-700">
+
+
+   <header class="bg-white shadow-md sticky top-0 z-10">
+       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <h1 class="text-2xl font-bold section-title">The Alba Impact Innovation Centre</h1>
+           <nav class="hidden md:flex space-x-8">
+               <a href="#vision" class="text-gray-600 hover:text-[#7A5195]">Vision</a>
+               <a href="#solution" class="text-gray-600 hover:text-[#7A5195]">Solution</a>
+               <a href="#why-scotland" class="text-gray-600 hover:text-[#7A5195]">Why Scotland?</a>
+               <a href="#impact" class="text-gray-600 hover:text-[#7A5195]">Impact</a>
+           </nav>
+       </div>
+   </header>
+
+
+   <main class="container mx-auto p-4 md:p-8">
+
+
+       <section id="vision" class="text-center my-12 md:my-16">
+           <h2 class="text-4xl md:text-5xl font-extrabold section-title mb-4">Forging Scotland's Future in Global Impact Technology</h2>
+           <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
+               To establish Scotland as the global leader in "Impact Tech" by building a world-class tech hub and investment fund dedicated to ventures that use technology for a positive, measurable impact on society and the environment.
+           </p>
+       </section>
+
+
+       <section id="opportunity" class="my-12 md:my-20">
+            <div class="card p-6 md:p-8 text-center kpi-card">
+               <h3 class="text-2xl font-semibold text-gray-200 mb-2">The Global Opportunity</h3>
+               <p class="text-6xl md:text-8xl font-extrabold text-[#FFA600] my-4">$2.3 Trillion</p>
+               <p class="text-lg text-gray-300">Projected size of the global impact investing market by 2025. Scotland has the history, values, and political will to lead this purpose-driven economic movement.</p>
+           </div>
+       </section>
+
+
+       <section id="solution" class="my-12 md:my-20">
+           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 section-title">Our Two-Pillar Solution</h2>
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 items-center text-center">
+               <div class="lg:col-span-2 card p-6 h-full">
+                   <h3 class="text-2xl font-bold mb-2 text-[#374C80]">Pillar 1: The Innovation Hub</h3>
+                   <p class="text-5xl mb-4">💡</p>
+                   <p>A curated ecosystem to nurture and accelerate impact-driven ventures, providing mentorship, talent, and resources.</p>
+               </div>
+               <div class="lg:col-span-1 flex justify-center items-center">
+                   <span class="flow-arrow text-5xl transform rotate-90 md:rotate-0">→</span>
+               </div>
+               <div class="lg:col-span-2 card p-6 h-full">
+                   <h3 class="text-2xl font-bold mb-2 text-[#BC5090]">Pillar 2: The Pax Alba Venture Fund</h3>
+                    <p class="text-5xl mb-4">💰</p>
+                   <p>A public-private investment fund with a dual mandate for financial returns and measurable global impact.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="hub" class="my-12 md:my-20">
+           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 section-title">Inside the Innovation Hub</h2>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div class="card p-6">
+                   <h3 class="text-xl font-bold text-center mb-4">Core Focus Areas</h3>
+                   <p class="text-center text-sm text-gray-500 mb-4">The Hub will specialize in nurturing ventures across three critical, interconnected domains of Impact Tech.</p>
+                   <div class="chart-container">
+                       <canvas id="hubFocusChart"></canvas>
+                   </div>
+               </div>
+               <div class="card p-6">
+                   <h3 class="text-xl font-bold text-center mb-4">Diversified Revenue Streams</h3>
+                   <p class="text-center text-sm text-gray-500 mb-4">A sustainable financial model ensures long-term stability and growth for the hub and its ventures.</p>
+                   <div class="chart-container">
+                       <canvas id="revenueChart"></canvas>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="fund" class="my-12 md:my-20">
+           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 section-title">Powering Growth: The Pax Alba Fund</h2>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+               <div class="card p-6">
+                   <h3 class="text-xl font-bold text-center mb-4">Fund Capitalization Strategy</h3>
+                    <p class="text-center text-sm text-gray-500 mb-4">A public-private partnership model designed to de-risk investment and attract a diverse range of capital.</p>
+                   <div class="chart-container">
+                       <canvas id="fundCapitalChart"></canvas>
+                   </div>
+               </div>
+                <div class="card p-6 h-full flex flex-col justify-center">
+                   <h3 class="text-xl font-bold text-center mb-6">The Evergreen Investment Cycle</h3>
+                   <div class="space-y-4">
+                       <div class="flex items-center space-x-4"><div class="bg-[#374C80] text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">1</div><p>Identify & Nurture high-potential ventures in the Hub.</p></div>
+                       <div class="ml-5 text-2xl text-[#FFA600]">↓</div>
+                       <div class="flex items-center space-x-4"><div class="bg-[#7A5195] text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">2</div><p>Invest capital from the Pax Alba Fund to scale operations.</p></div>
+                        <div class="ml-5 text-2xl text-[#FFA600]">↓</div>
+                       <div class="flex items-center space-x-4"><div class="bg-[#BC5090] text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">3</div><p>Achieve successful growth and exit, generating returns.</p></div>
+                        <div class="ml-5 text-2xl text-[#FFA600]">↓</div>
+                       <div class="flex items-center space-x-4"><div class="bg-[#FF764A] text-white rounded-full h-10 w-10 flex items-center justify-center font-bold">4</div><p>Reinvest profits into the fund for the next generation of innovators.</p></div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="why-scotland" class="my-12 md:my-20">
+           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 section-title">Why Scotland is the Perfect Home</h2>
+           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+               <div class="card p-6 text-center">
+                   <p class="text-4xl mb-3">🤝</p>
+                   <h3 class="font-bold text-lg mb-2">Political Alignment</h3>
+                   <p class="text-sm">Directly supports the SNP's core policies of building a Wellbeing Economy and achieving Net Zero.</p>
+               </div>
+               <div class="card p-6 text-center">
+                   <p class="text-4xl mb-3">🌍</p>
+                   <h3 class="font-bold text-lg mb-2">Values-Driven</h3>
+                   <p class="text-sm">Translates Scotland's compassionate global reputation into a tangible, economic force for good.</p>
+               </div>
+               <div class="card p-6 text-center">
+                   <p class="text-4xl mb-3">🎓</p>
+                   <h3 class="font-bold text-lg mb-2">Academic Excellence</h3>
+                   <p class="text-sm">World-class universities provide a strong, reliable foundation for top-tier talent and research.</p>
+               </div>
+               <div class="card p-6 text-center">
+                   <p class="text-4xl mb-3">📈</p>
+                   <h3 class="font-bold text-lg mb-2">Economic Opportunity</h3>
+                   <p class="text-sm">Attracts global capital, creates high-value jobs, and develops new exportable technologies.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="impact" class="my-12 md:my-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 section-title">Projected 5-Year Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div class="card p-6">
+                   <h3 class="text-xl font-bold text-center mb-4">High-Value Job Creation</h3>
+                   <p class="text-center text-sm text-gray-500 mb-4">Projected direct and indirect jobs created through the Centre's activities and portfolio companies.</p>
+                   <div class="chart-container">
+                       <canvas id="jobGrowthChart"></canvas>
+                   </div>
+               </div>
+                <div class="grid grid-rows-2 gap-8">
+                   <div class="card p-6 text-center flex flex-col justify-center kpi-card">
+                        <h3 class="text-2xl font-semibold text-gray-200 mb-2">Capital Raised by Ventures</h3>
+                        <p class="text-6xl font-extrabold text-[#FFA600] my-2">£150M+</p>
+                        <p class="text-lg text-gray-300">Projected follow-on funding raised by portfolio companies.</p>
+                   </div>
+                   <div class="card p-6 text-center flex flex-col justify-center">
+                       <h3 class="text-xl font-bold mb-2">Scotland's Global Ranking</h3>
+                        <p class="text-sm text-gray-500 mb-4">From emerging player to a Top 5 global leader in Impact Tech.</p>
+                        <div class="flex justify-around items-end h-full">
+                           <div class="text-center"><p class="font-bold">Current</p><div class="w-16 h-16 bg-gray-300 rounded-md"></div></div>
+                           <div class="text-5xl font-bold text-[#FFA600]">→</div>
+                           <div class="text-center"><p class="font-bold text-[#003F5C]">Future</p><div class="w-16 h-40 bg-[#003F5C] rounded-md"></div></div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="call-to-action" class="my-12 md:my-20 text-center">
+            <div class="card p-8 max-w-4xl mx-auto">
+               <h2 class="text-3xl font-bold mb-4 section-title">A Partnership for Scotland's Future</h2>
+               <p class="text-lg text-gray-600 mb-6">We request a strategic partnership with the Scottish government, starting with a foundational investment to launch the Centre and the Fund. This is a direct path to a more prosperous, ethical, and internationally influential Scotland.</p>
+               <a href="mailto:alynstirlingsnp@gmail.com" class="bg-[#7A5195] hover:bg-[#5f3f74] text-white font-bold py-3 px-8 rounded-lg transition-colors">Contact Alyn Smith to Begin</a>
+            </div>
+       </section>
+   </main>
+
+
+<script>
+   function wrapLabels(label) {
+       if (typeof label !== 'string' || label.length <= 16) {
+           return label;
+       }
+       const words = label.split(' ');
+       const lines = [];
+       let currentLine = '';
+       words.forEach(word => {
+           if ((currentLine + ' ' + word).trim().length > 16) {
+               lines.push(currentLine.trim());
+               currentLine = word;
+           } else {
+               currentLine = (currentLine + ' ' + word).trim();
+           }
+       });
+       if (currentLine) {
+           lines.push(currentLine.trim());
+       }
+       return lines;
+   }
+
+
+   const tooltipTitleCallback = (tooltipItems) => {
+       const item = tooltipItems[0];
+       let label = item.chart.data.labels[item.dataIndex];
+       return Array.isArray(label) ? label.join(' ') : label;
+   };
+  
+   const sharedChartOptions = {
+       responsive: true,
+       maintainAspectRatio: false,
+       plugins: {
+           legend: {
+               position: 'bottom',
+               labels: {
+                   padding: 20,
+                   font: {
+                       size: 14,
+                       family: 'Inter'
+                   }
+               }
+           },
+           tooltip: {
+               callbacks: {
+                   title: tooltipTitleCallback
+               }
+           }
+       }
+   };
+  
+   const palette = {
+       blue: '#003F5C',
+       purple: '#7A5195',
+       pink: '#BC5090',
+       orange: '#FF764A',
+       yellow: '#FFA600',
+       darkBlue: '#374C80',
+       red: '#EF5675'
+   };
+  
+   new Chart(document.getElementById('hubFocusChart'), {
+       type: 'doughnut',
+       data: {
+           labels: ['PeaceTech', 'Humanitarian & World Aid Tech', 'Human Rights Tech'],
+           datasets: [{
+               label: 'Focus Area',
+               data: [33.3, 33.3, 33.3],
+               backgroundColor: [palette.darkBlue, palette.purple, palette.pink],
+               borderColor: '#FFFFFF',
+               borderWidth: 4
+           }]
+       },
+       options: sharedChartOptions
+   });
+
+
+   new Chart(document.getElementById('revenueChart'), {
+       type: 'bar',
+       data: {
+           labels: ['Corporate Partnerships', 'Membership Fees', 'Grants & Philanthropy'],
+           datasets: [{
+               label: 'Revenue Source %',
+               data: [50, 35, 15],
+               backgroundColor: [palette.blue, palette.orange, palette.yellow],
+               borderRadius: 5
+           }]
+       },
+       options: {
+           ...sharedChartOptions,
+           scales: {
+               y: {
+                   beginAtZero: true,
+                   ticks: { callback: value => value + '%' }
+               }
+           },
+           plugins: { ...sharedChartOptions.plugins, legend: { display: false } }
+       }
+   });
+
+
+   new Chart(document.getElementById('fundCapitalChart'), {
+       type: 'pie',
+       data: {
+           labels: ['Scottish Government Seed Capital', 'Private Impact Investors', 'Corporate LPs'],
+           datasets: [{
+               label: 'Capital Source',
+               data: [25, 45, 30],
+               backgroundColor: [palette.blue, palette.red, palette.purple],
+               borderColor: '#FFFFFF',
+               borderWidth: 4
+           }]
+       },
+       options: sharedChartOptions
+   });
+
+
+   const jobGrowthLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
+   new Chart(document.getElementById('jobGrowthChart'), {
+       type: 'line',
+       data: {
+           labels: jobGrowthLabels,
+           datasets: [{
+               label: 'Jobs Created',
+               data: [50, 150, 320, 550, 800],
+               borderColor: palette.purple,
+               backgroundColor: 'rgba(122, 81, 149, 0.1)',
+               fill: true,
+               tension: 0.4
+           }]
+       },
+       options: {
+           ...sharedChartOptions,
+            plugins: { ...sharedChartOptions.plugins, legend: { display: false } }
+       }
+   });
+
+
+</script>
+</body>
+</html>
